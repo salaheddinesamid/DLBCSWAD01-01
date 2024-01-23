@@ -1,0 +1,19 @@
+body{
+  margin:0;
+  padding:0;
+}
+#header{
+  background-color: black;
+  color:white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.card{
+  height:300px;
+}
+.order{
+  border:1px solid rgb(13, 154, 8);
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  
+}

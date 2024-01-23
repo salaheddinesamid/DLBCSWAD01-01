@@ -1,0 +1,48 @@
+{
+    "processors":[
+        {
+            "id" : 1,
+            "name":"Intel® Core™ i3 Processor",
+            "price":150,
+            "quantity":1,
+            "img":"/Users/mac/Desktop/finalproject/src/media/intelUltra.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "Intel® Core™ i5 Processor",
+            "price" : 200,
+            "quantity":1,
+            "img":"/Users/mac/Desktop/finalproject/src/media/intelUltra.jpg"
+        },
+        {
+            "id" : 3,
+            "name" : "Intel® Core™ i7 Processor",
+            "price" : 400,
+            "quantity":1,
+            "img":"/Users/mac/Desktop/finalproject/src/media/intelUltra.jpg"
+        }
+
+    ],
+
+    "rams":[
+        {
+            "id" : 1,
+            "name" : "G.Skill Trident Z5 Neo RGB DDR5-6000 (2 x 16GB)",
+            "price": 250,
+            "img":"/Users/mac/Desktop/finalproject/src/media/ram1.jpeg",
+            "quantity":1
+        },
+        {
+            "id" : 2,
+            "price" : 300,
+            "name" : "G.Skill Trident Z5 RGB DDR5-6000 (2 x 16GB)",
+            "quantity":1
+        },
+        {
+            "id":3,
+            "price": 500,
+            "name" :"Samsung DDR5-4800 (2 x 16GB)",
+            "quantity":1
+        }
+    ]
+}
