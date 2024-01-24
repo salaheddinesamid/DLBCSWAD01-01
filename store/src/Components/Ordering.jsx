@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import jsonData from "../products.json";
 import { OrderSummary } from "./OrderSummary";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 let processors = jsonData["processors"]
 let rams = jsonData["rams"];
 export function Ordering(){
@@ -57,7 +58,7 @@ export function Ordering(){
                                         ram.quantity = e.target.value;
                                         ram.name = `${ram.name} x ${ram.quantity} `
                                       }}/>
-                                <button class="btn btn-success" onClick={()=>{
+                                <button class="btn btn-success mt-4" onClick={()=>{
                                     setOrders([...orders, ram]);
                                     setTotalPrice(totalPrice = totalPrice + ram.price *ram.quantity)
                                 }}>Add to Bag</button>

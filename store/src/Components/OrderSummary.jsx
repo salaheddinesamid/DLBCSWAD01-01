@@ -21,7 +21,9 @@ export function OrderSummary(props){
                 <h4>Total Price:{props.total} $</h4>
             </div>
             <div class="row">
-                <button class="btn btn-primary">Confirm Order</button>
+                <button class="btn btn-primary" onClick={()=>{
+                    props.handleSubmit();
+                }}>Confirm Order</button>
             </div>
         </div>
     )

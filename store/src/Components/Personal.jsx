@@ -1,5 +1,10 @@
-import React from "react";
-export function Personal(){
+import React, { useState } from "react";
+import {Routes, Route, useNavigate} from 'react-router-dom';
+export function Personal(props){
+    
+    let [firstName,setFirstName] = useState("");
+    let [lastName,setLastName] = useState("");
+    let [email,setEmail] = useState("")
     return(
         <div class="mt-4">
             <div className="row mt-4">
@@ -9,19 +14,25 @@ export function Personal(){
                 <div class="row">
                   <div class="col-xl-8 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">First Name:</label>
-                       <input type="email"  class="form-control" id="exampleFormControlInput1" placeholder=""/>
+                       <input type="text" onChange={(e)=>{
+                        setFirstName(e.target.value);
+                       }} value={firstName}  class="form-control" id="exampleFormControlInput1" placeholder=""/>
                       </div>
                 </div>
                 <div class="row">
                 <div class="col-xl-8 mb-3">
                     <label for="lastName" class="form-label">Last Name:</label>
-                       <input type="email" class="form-control" id="lastName" placeholder=""/>
+                       <input type="text" class="form-control" id="lastName" placeholder="" onChange={(e)=>{
+                        setLastName(e.target.value);
+                       }}/>
                       </div>
                 </div>
                 <div class="row">
                 <div class="col-xl-8 mb-3">
                      <label for="exampleFormControlInput1" class="form-label">Email address:</label>
-                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+                     <input type="email" class="form-control" onChange={(e)=>{
+                        setEmail(e.target.value)
+                     }} id="exampleFormControlInput1" placeholder="name@example.com"/>
                             </div>
                 </div>
                 <div class="row">
@@ -281,6 +292,13 @@ export function Personal(){
                     <div class="col-xl-8 mb-3">
                         <label for="address" class="label-form">Address:</label>
                         <input type="text" placeholder="" class="form-control"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-8">
+                        <button class="btn btn-success" onClick={()=>{
+                            props.handleSubmit(firstName,lastName,email)
+                        }}>Submit</button>
                     </div>
                 </div>
             </div>
