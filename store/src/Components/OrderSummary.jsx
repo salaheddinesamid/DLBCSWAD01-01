@@ -1,12 +1,20 @@
 import React from "react";
+import { useState } from "react";
 import ordersData from "../orders.json"
 
 export function OrderSummary(props){
+    
+
     let orders = props.data;
     return(
         <div>
             <h3>Order Summary:</h3>
-            <div>
+            <div class="">
+                <h5 class="text-center">Personal Information:</h5>
+                <div class="col-xl-8">First Name: <b>{props.firstName}</b></div>
+                <div class="col-xl-8">Last Name: <b> {props.lastName}</b></div>
+                <div class="col-xl-8">Email: <b>{props.email}</b></div>
+                <div class="col-xl-8">Address: <b>{props.address}</b></div>
                 <h6 class="text-center ">Orders:</h6>
                 {orders.map((order)=>{
                     return(

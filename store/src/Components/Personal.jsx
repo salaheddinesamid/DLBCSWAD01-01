@@ -4,7 +4,8 @@ export function Personal(props){
     
     let [firstName,setFirstName] = useState("");
     let [lastName,setLastName] = useState("");
-    let [email,setEmail] = useState("")
+    let [email,setEmail] = useState("");
+    let[address,setAddress] = useState("")
     return(
         <div class="mt-4">
             <div className="row mt-4">
@@ -291,13 +292,15 @@ export function Personal(props){
                 <div class="row">
                     <div class="col-xl-8 mb-3">
                         <label for="address" class="label-form">Address:</label>
-                        <input type="text" placeholder="" class="form-control"/>
+                        <input type="text" value={address} onChange={(e)=>{
+                            setAddress(e.target.value)
+                        }} placeholder="" class="form-control"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xl-8">
                         <button class="btn btn-success" onClick={()=>{
-                            props.handleSubmit(firstName,lastName,email)
+                            props.handleSubmit(firstName,lastName,email,address)
                         }}>Submit</button>
                     </div>
                 </div>

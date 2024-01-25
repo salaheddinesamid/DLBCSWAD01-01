@@ -4,7 +4,7 @@ import { OrderSummary } from "./OrderSummary";
 import {Routes, Route, useNavigate} from 'react-router-dom';
 let processors = jsonData["processors"]
 let rams = jsonData["rams"];
-export function Ordering(){
+export function Ordering(props){
     let [orders,setOrders] = useState([])
     let [totalPrice,setTotalPrice] = useState(0);
     function deleteContactHandler (id,price,quantity){
@@ -71,7 +71,7 @@ export function Ordering(){
             </div>
         </div>
             <div className="col-xl-5">
-                <OrderSummary data={orders} handleRemove={deleteContactHandler} total={totalPrice} />
+                <OrderSummary data={orders} handleRemove={deleteContactHandler} total={totalPrice} firstName={props.firstName} lastName = {props.lastName} email={props.email} address={props.address} />
             </div>
         </div>
     )
