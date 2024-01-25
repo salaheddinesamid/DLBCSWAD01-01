@@ -293,7 +293,13 @@ export function Personal(props){
                     <div class="col-xl-8 mb-3">
                         <label for="address" class="label-form">Address:</label>
                         <input type="text" value={address} onChange={(e)=>{
-                            setAddress(e.target.value)
+                            setAddress(e.target.value);
+                            if(e.target.value === "Mohammedia"){
+                                document.body.style.backgroundColor = "red"
+                            } else{
+                                document.body.style.backgroundColor = "white";
+                            }
+                            
                         }} placeholder="" class="form-control"/>
                     </div>
                 </div>
