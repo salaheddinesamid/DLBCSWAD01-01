@@ -7,23 +7,18 @@ import { Personal } from './Components/Personal';
 import { Ordering } from './Components/Ordering';
 import { useState } from 'react';
 import { Home } from './Routes/Home';
-import {Routes} from "react-router-dom"
-import {Route,BrowserRouter} from "react-router-dom"
-import { Confirmation } from './Confirmation';
-import {useNavigate} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Confirmation } from './Routes/Confirmation';
 
 function App() {
-  const navigate = useNavigate();
-  function Confirm(){
-    navigate("/confirmation")
-  }
   return (
     <BrowserRouter>
-    <Routes>
-      <Route pathname="/" element={<Home />}/>
-    </Routes>
-    </BrowserRouter>
-  );
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path='/confirmation' element={<Confirmation />}></Route>
+      </Routes>
+      </BrowserRouter>
+  )
 }
 
 export default App;

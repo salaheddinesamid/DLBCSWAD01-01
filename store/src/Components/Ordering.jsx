@@ -71,7 +71,7 @@ export function Ordering(props){
             </div>
         </div>
             <div className="col-xl-5">
-                <OrderSummary data={orders} handleRemove={deleteContactHandler} total={totalPrice} firstName={props.firstName} lastName = {props.lastName} email={props.email} address={props.address} />
+                <OrderSummary data={orders} handleRemove={deleteContactHandler} total={totalPrice} firstName={props.firstName} lastName = {props.lastName} email={props.email} address={props.address}/>
             </div>
         </div>
     )

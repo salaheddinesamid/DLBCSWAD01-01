@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import ordersData from "../orders.json"
-
+import ordersData from "../orders.json";
+import Axios from "axios";
+import {useNavigate} from "react-router-dom"
 export function OrderSummary(props){
-    
-
+    const navigate = useNavigate();
     let orders = props.data;
     return(
         <div>
@@ -30,7 +30,11 @@ export function OrderSummary(props){
             </div>
             <div class="row">
                 <button class="btn btn-primary" onClick={()=>{
-                    props.handleSubmit();
+                    if(props.total !== 0){
+                        if(props.firstName !=="" && props.lastName !=="" && props.email !=""){
+                            navigate("/confirmation")
+                        }
+                    }
                 }}>Confirm Order</button>
             </div>
         </div>

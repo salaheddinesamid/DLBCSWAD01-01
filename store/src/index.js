@@ -5,14 +5,12 @@ import {Routes, Route, useNavigate} from 'react-router-dom'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Confirmation } from './Confirmation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+   
        <App/>
-    </Router>
    
   </React.StrictMode>
 );
